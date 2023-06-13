@@ -2,7 +2,6 @@ import 'package:conditional_builder_null_safety/conditional_builder_null_safety.
 import 'package:flutter/material.dart';
 import 'package:news/web_screen/web_screen.dart';
 
-import '../news_cubit/news_cubit.dart';
 
 Widget BuildNewsItem(Map news,context){
   return InkWell(

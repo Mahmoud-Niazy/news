@@ -5,10 +5,10 @@ import 'package:news/cashe_helper/cashe_helper.dart';
 import 'package:news/dio_helper/dio_helper.dart';
 import 'package:news/news_cubit/news_cubit.dart';
 import 'package:news/news_layout/news_layout.dart';
-
 import 'app_cubit/app_cubit.dart';
 import 'app_cubit/app_states.dart';
-//Mahmoud
+
+
 void main ()async {
   WidgetsFlutterBinding.ensureInitialized();
   await CasheHelper.Init();
