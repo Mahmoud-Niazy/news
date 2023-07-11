@@ -1,4 +1,3 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news/dio_helper/dio_helper.dart';
@@ -6,6 +5,8 @@ import 'package:news/news_cubit/news_states.dart';
 import 'package:news/news_screens/business.dart';
 import 'package:news/news_screens/science.dart';
 import 'package:news/news_screens/sport.dart';
+
+import '../cashe_helper/cashe_helper.dart';
 
 class NewsCubit extends Cubit<NewsStates>{
   NewsCubit() : super(NewsInitialState());
@@ -105,4 +106,12 @@ class NewsCubit extends Cubit<NewsStates>{
     });
   }
 
+  bool is_dark = CasheHelper.GetData(key: 'isDark') ?? false  ;
+  changeMode(){
+    is_dark = !is_dark ;
+    CasheHelper.SvaeData(key: 'isDark', value: is_dark).then((value){
+      emit(ChangeModeState());
+      print(CasheHelper.GetData(key: 'isDark'));
+    });
+  }
 }

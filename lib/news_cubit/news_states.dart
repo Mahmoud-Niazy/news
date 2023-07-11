@@ -1,4 +1,3 @@
-import 'package:news/news_cubit/news_cubit.dart';
 
 abstract class NewsStates {}
 class NewsInitialState extends NewsStates {}
@@ -16,4 +15,6 @@ class GetScienceDataErrorState extends NewsStates {}
 
 class GetSearchDataSuccessfullyState extends NewsStates {}
 class GetSearchDataErrorState extends NewsStates {}
+
+class ChangeModeState extends NewsStates{}
 
